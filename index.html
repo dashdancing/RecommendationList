@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<link rel="stylesheet" href="estilos.css">
+	<title>Monkeys House List</title>
+</head>
+<body>
+	<header class="top">
+		<div class="logo">
+			<img src="/assets/images/Screenshot_2.png" alt="Logo" width="250px" >
+		</div>
+		<div class="username">
+			<span class="sigIn">
+			<button id="btn-signIn-header" class="btn-signIn-header">SIGN IN</button>	
+			</span>
+			<span class="logIn">
+			<button id="btn-logIn-header" class="btn-logIn-header">LOG IN </button>	
+			</span>
+			
+		</div>
+	</header>
+
+	<div class="contenedor">
+		<main>
+			<button id="btn-abrir-popup" class="btn-abrir-popup">Agregar recomendación</button>
+			<table>
+				<td>
+					<table class="mainList" id="mainList">
+						<thead>
+							<tr>
+								<th>Título</th>
+								<th>Plataforma</th>
+								<th>Género</th>
+								<th>Estado</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody>
+	
+						</tbody>
+					</table>
+				</td>
+		</table>
+		</main>
+
+		<div class="overlay" id="overlay">
+			<div class="popup" id="popup">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+				<h3>Guarda todas tus recomendaciones</h3>
+				<h4>Welcome to the party house!</h4>
+				<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+					<div>
+						<label>Título</label><label class="validation-error hide" id="tituloValidationError">This field is required.</label>
+						<input type="text" name="titulo" id="titulo">
+					</div>
+					<div>
+						<label>Plataforma</label>
+						<input type="text" name="plataforma" id="plataforma">
+					</div>
+					<div>
+						<label>Género</label>
+						<input type="text" name="genero" id="genero">
+					</div>
+					<div>
+						<label>Estado</label>
+						<input type="text" name="estado" id="estado">
+					</div>
+					<div  class="form-action-buttons">
+						<input type="submit" value="Guardar">
+					</div>
+				</form>
+				
+			</div>
+		</div>
+	</div>
+
+	<script src="popup.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
