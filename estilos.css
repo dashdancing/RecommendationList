@@ -29,15 +29,15 @@ header .username {
 }
 
 header .sigIn {
-	padding: 25px;
+	padding: 10px;
 }
 
 header .logIn {
-	padding: 25px;
+	padding: 10px;
 }
 header .username .btn-signIn-header {
 	padding: 0 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	height: 40px;
 	line-height: 40px;
 	border: none;
@@ -53,7 +53,7 @@ header .username .btn-signIn-header {
 
 header .username .btn-logIn-header {
 	padding: 0 20px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	height: 40px;
 	line-height: 40px;
 	border: none;
@@ -68,17 +68,33 @@ header .username .btn-logIn-header {
 }
 
 .contenedor {
-	width: 90%;
-	max-width: 1000px;
+	width: 1000px;
 	margin: 20px auto;
+	display: grid;
+	justify-items: end;
 }
 
 .contenedor main {
 	line-height: 28px;
 }
 
+.main-content {
+	display: inline-block;
+}
+
+.main-content {
+	display: inline-block;
+	justify-content: center;
+}
+.btn-agregar {
+	width: 100%;	
+	display: flex;
+	justify-content: flex-end;
+}
+
 .contenedor main .btn-abrir-popup {
 	padding: 0 20px;
+
 	margin-bottom: 20px;
 	height: 40px;
 	line-height: 40px;
@@ -126,7 +142,6 @@ header .username .btn-logIn-header {
 	padding: 20px;
 	text-align: center;
 	width: 600px;
-	
 	transition: .3s ease all;
 	transform: scale(0.7);
 	opacity: 0;
@@ -229,25 +244,32 @@ header .username .btn-logIn-header {
 }
 
 
-.listaEmpleos{
-    background-color: #d5d811;
+.mainList{
+	background-color: #fffffe;
+	text-align: center;
+	justify-content: center;
+	width: 600px;
 }
+
 table{
-    border-collapse: collapse;
-    background-color: #cc0213;
+	border-collapse: collapse;
+	border: solid 1px #0000ee5d
 }
+
 table.list{
-    width:100%;
+	width:100%;
 }
 
 th {
-    border: 1px solid #3606e6;
-    text-align: left;
+	border: 1px solid #0000ee;
+	background-color: #4f4cfb4d;
+    text-align: center;
     padding: 8px;
 }
 tr:nth-child(even),table.list thead>tr {
-    background-color: #e3495e;
+	background-color: #c8d3d63d; 
 }
+
 
 input[type=text], input[type=number] {
     width: 100%;
