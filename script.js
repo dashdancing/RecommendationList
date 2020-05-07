@@ -1,5 +1,6 @@
 var selectedRow = null
 
+
 function onFormSubmit() {
     if (validate()) {
         var formData = readFormData();
@@ -23,14 +24,14 @@ function readFormData() {
 function insertNewRecord(data) {
     var table = document.getElementById("mainList").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
-    cell1.innerHTML = data.titulo;
-    cell2 = newRow.insertCell(1);
-    cell2.innerHTML = data.plataforma;
-    cell3 = newRow.insertCell(2);
-    cell3.innerHTML = data.genero;
-    cell4 = newRow.insertCell(3);
-    cell4.innerHTML = data.estado;
+    cell0 = newRow.insertCell(0);
+    cell0.innerHTML = data.titulo;
+    cell1 = newRow.insertCell(1);
+    cell1.innerHTML = data.plataforma;
+    cell2 = newRow.insertCell(2);
+    cell2.innerHTML = data.genero;
+    cell3 = newRow.insertCell(3);
+    cell3.innerHTML = data.estado;
     cell4 = newRow.insertCell(4);
     cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
@@ -45,11 +46,8 @@ function resetForm() {
 }
 
 function onEdit(td) {
-    selectedRow = td.parentElement.parentElement;
-    document.getElementById("titulo").value = selectedRow.cells[0].innerHTML;
-    document.getElementById("plataforma").value = selectedRow.cells[1].innerHTML;
-    document.getElementById("genero").value = selectedRow.cells[2].innerHTML;
-    document.getElementById("estado").value = selectedRow.cells[3].innerHTML;
+    activeRow = td.parentElement.parentElement
+    showPopup('edit', activeRow)
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.titulo;
